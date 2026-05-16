@@ -1,0 +1,34 @@
+.uniqe_meal {
+    display: flex;
+}
+
+.text_btn {
+    background-color: #226F54;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 66px;
+    width: 50%;
+}
+
+.text_btn p {
+    width: 50%;
+    font-family: 'Advent Pro';
+    font-size: 24px;
+    font-weight: 400;
+    color: #F3EFE0;
+    text-transform: uppercase;
+}
+
+.text_btn a {
+    padding: 12px 31px;
+    border-radius: 20px;
+    background-color: #21664E;
+    border: 2px solid #689283;
+    font-family: 'Advent Pro';
+    font-size: 20px;
+    font-weight: 500;
+    color: #F3EFE0;
+}

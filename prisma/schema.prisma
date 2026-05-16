@@ -1,0 +1,230 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  // output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model user {
+  id       Int     @id @default(autoincrement())
+  name     String
+  surname  String
+  phone    String
+  email    String
+  password String?
+
+  accounts          account[]
+  sessions          session[]
+  addresses         address[]
+  payments          payment[]
+  orders            order[]
+  cartItems         cart_item[]
+  favouriteDefaults favourite_default[]
+  favouriteCustoms  favourite_custom[]
+}
+
+model account {
+  id                String  @id @default(cuid())
+  userId            Int
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+
+  user user @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       Int
+  expires      DateTime
+  user         user     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model verification_token {
+  identifier String
+  token      String   @unique
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+model address {
+  id            Int    @id @default(autoincrement())
+  street        String
+  home_number   Int
+  office_number Int
+  floor         Int
+  user          user?  @relation(fields: [userId], references: [id])
+  userId        Int?
+}
+
+model payment {
+  id          Int    @id @default(autoincrement())
+  card_number String
+  month       String
+  year        String
+  cvc         String
+  user        user?  @relation(fields: [userId], references: [id])
+  userId      Int?
+}
+
+model product {
+  id           Int     @id @default(autoincrement())
+  name_of_food String
+  price        String
+  ingredients  String
+  gramms       String?
+  kkals        String?
+  kkal         Int
+  belki        String
+  zhiri        String
+  uglevody     String
+  food_img     String
+
+  cartDefaults      cart_default[]
+  favouriteDefaults favourite_default[]
+  cartItems         cart_item[]
+}
+
+model cart_item {
+  id          Int     @id @default(autoincrement())
+  productId   Int?
+  customId    Int?
+  quantity    Int     @default(1)
+  userId      Int     @default(1)
+  selections  String?
+  customPrice Int?
+
+  product product?         @relation(fields: [productId], references: [id])
+  custom  custom_products? @relation(fields: [customId], references: [id])
+  user    user             @relation(fields: [userId], references: [id])
+}
+
+model order {
+  id         Int      @id @default(autoincrement())
+  userId     Int
+  items      String
+  totalPrice Int
+  status     String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  user user @relation(fields: [userId], references: [id])
+}
+
+model cart_default {
+  id Int @id @default(autoincrement())
+
+  product   product? @relation(fields: [productId], references: [id])
+  productId Int?
+}
+
+model favourite_default {
+  id        Int     @id @default(autoincrement())
+  productId Int
+  userId    Int
+  user      user    @relation(fields: [userId], references: [id])
+  product   product @relation(fields: [productId], references: [id])
+
+  @@unique([userId, productId])
+}
+
+model custom_products {
+  id                 Int                @id @default(autoincrement())
+  custom_name        String
+  start_price        String
+  custom_product_img String
+  start_set          String?
+  bases              base[]
+  sauces             sauce[]
+  cheeses            cheese[]
+  vegetables         vegetable[]
+  meats              meat[]
+  cartCustoms        cart_custom[]
+  favouriteCustoms   favourite_custom[]
+  cartItems          cart_item[]
+}
+
+model cart_custom {
+  id Int @id @default(autoincrement())
+
+  custom_products   custom_products? @relation(fields: [custom_productsId], references: [id])
+  custom_productsId Int?
+}
+
+model favourite_custom {
+  id         Int             @id @default(autoincrement())
+  customId   Int
+  userId     Int
+  savedPrice Int?
+  selections String?
+  user       user            @relation(fields: [userId], references: [id])
+  custom     custom_products @relation(fields: [customId], references: [id])
+
+  @@unique([userId, customId])
+}
+
+model base {
+  id            Int    @id @default(autoincrement())
+  name_of_base  String
+  img_of_base   String
+  price_of_base String
+
+  custom_products   custom_products? @relation(fields: [custom_productsId], references: [id])
+  custom_productsId Int?
+}
+
+model sauce {
+  id             Int    @id @default(autoincrement())
+  name_of_sauce  String
+  price_of_souce String
+
+  custom_products   custom_products? @relation(fields: [custom_productsId], references: [id])
+  custom_productsId Int?
+}
+
+model cheese {
+  id              Int    @id @default(autoincrement())
+  name_of_cheese  String
+  price_of_cheese String
+
+  custom_products   custom_products? @relation(fields: [custom_productsId], references: [id])
+  custom_productsId Int?
+}
+
+model vegetable {
+  id                  Int    @id @default(autoincrement())
+  name_of_vegetable   String
+  price_of_vegetables String
+
+  custom_products   custom_products? @relation(fields: [custom_productsId], references: [id])
+  custom_productsId Int?
+}
+
+model meat {
+  id            Int    @id @default(autoincrement())
+  name_of_meat  String
+  price_of_meat String
+
+  custom_products   custom_products? @relation(fields: [custom_productsId], references: [id])
+  custom_productsId Int?
+}

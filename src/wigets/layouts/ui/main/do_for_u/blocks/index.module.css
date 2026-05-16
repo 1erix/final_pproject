@@ -1,0 +1,78 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.block {
+    display: flex;
+    justify-content: center;
+}
+
+.left_part {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 323px;
+    height: 323px;
+    gap: 43px;
+    background-color: #856A5D;
+    border-radius: 15px;
+    padding: 50px;
+    text-align: center;
+    position: relative;
+    right: 150px;
+    align-items: center;
+    z-index: 2;
+}
+
+.right_part img {
+    width: 323px;
+    height: 323px;
+}
+
+.right_part {
+    position: absolute;
+    right: 430px;
+    z-index: 1;
+}
+
+.left_part h1 {
+    font-size: 20px;
+    font-family: 'Advent Pro';
+    text-transform: uppercase;
+    color: #F3EFE0;
+    font-weight: 500;
+}
+
+.left_part p {
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    font-weight: 400;
+    color: #F3EFE0;
+}
+
+.left_part a {
+    padding: 10px 20px;
+    background-color: #F3EFE0;
+    border: 3px solid #492D1F;
+    border-radius: 15px;
+    font-family: 'Advent Pro';
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    align-items: center;
+}
+
+.scd_left_part {
+    right: 730px;
+    position: absolute;
+    z-index: 1;
+}
+
+.scd_right_part {
+    left: 145px;
+    z-index: 2;
+    background-color: #8B8982;
+}

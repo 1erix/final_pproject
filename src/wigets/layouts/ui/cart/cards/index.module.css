@@ -1,0 +1,97 @@
+.count {
+    display: flex;
+    border: 1.5px solid #4D493D;
+    padding: 3px 25px;
+    gap: 20px;
+    border-radius: 30px;
+    align-items: center;
+}
+
+.count button {
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.count p {
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    font-weight: 500;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.right_part h1 {
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    text-transform: uppercase;
+    color: #3C2A21;
+    cursor: pointer;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 500;
+    color: #3C2A21;
+}
+
+.right_part {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.without_line {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.line {
+    height: 1.5px;
+    background-color: #3C2A21;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    border: 1.5px solid #3C2A21;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.remove_btn button {
+    width: 130px;
+    height: 40px;
+    background-color: #F3EFE0;
+    border-radius: 20px;
+    color: #3C2A21;
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    text-transform: uppercase;
+    cursor: pointer;
+    border: 1.5px solid #3C2A21;
+}
+
+.emptyCart {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+    padding-left: 250px;
+    padding-top: 100px;
+}
+
+.emptyCart p {
+    font-family: 'Advent Pro';
+    font-size: 23px;
+    text-transform: uppercase;
+}

@@ -1,0 +1,67 @@
+.header {
+    display: flex;
+    padding: 16px 70px;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #F3EFE0;
+    backdrop-filter: blur(0px);
+    transition: all 0.3s ease;
+}
+
+.header.scrolled {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 12px 70px;
+    background-color: rgba(243, 239, 224, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 40px;
+    font-family: 'Advent Pro';
+    font-weight: 600;
+    color: #3C2A21;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: font-size 0.3s ease;
+}
+
+.header.scrolled .logo {
+    font-size: 36px;
+}
+
+.search {
+    cursor: pointer;
+    border: 1.5px solid #3C2A21;
+    width: 277px;
+    height: 45px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    gap: 5px;
+    background: none;
+}
+
+.search:hover {
+    background-color: #e8e0d5;
+}
+
+.header.scrolled .search {
+    height: 40px;
+    width: 260px;
+}
+
+.search p {
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    font-weight: 400;
+    color: #3C2A21;
+    text-transform: uppercase;
+}
+
+.profile {
+    cursor: pointer;
+}

@@ -1,0 +1,322 @@
+.making_an_order {
+    padding: 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #F3EFE0;
+    min-height: 100vh;
+}
+
+.title {
+    font-size: 32px;
+    font-family: 'Advent Pro';
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #3C2A21;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.leftSection {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.rightSection {
+    flex: 1;
+    position: sticky;
+    top: calc(80px + 20px);
+    align-self: flex-start;
+    height: fit-content;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
+.section {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(60, 42, 33, 0.1);
+}
+
+.section h2 {
+    font-size: 22px;
+    font-family: 'Advent Pro';
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #856A5D;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #856A5D;
+}
+
+.formGroup {
+    margin-bottom: 20px;
+}
+
+.formGroup input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 1.5px solid #3C2A21;
+    border-radius: 15px;
+    font-size: 16px;
+    font-family: 'Advent Pro';
+    background-color: #F3EFE0;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.formGroup input:focus {
+    outline: none;
+    border-color: #856A5D;
+    box-shadow: 0 0 0 3px rgba(133, 106, 93, 0.2);
+}
+
+.savedItems {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.savedLabel {
+    font-size: 14px;
+    font-family: 'Advent Pro';
+    font-weight: 500;
+    color: #3C2A21;
+    margin-bottom: 5px;
+}
+
+.radioLabel {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    border: 1.5px solid #e8e0d5;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #F3EFE0;
+}
+
+.radioLabel:hover {
+    background-color: #e8e0d5;
+    border-color: #856A5D;
+}
+
+.radioLabel input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #856A5D;
+}
+
+.radioLabel span {
+    font-size: 15px;
+    font-family: 'Advent Pro';
+    color: #3C2A21;
+}
+
+.cardDate {
+    margin-left: auto;
+    font-size: 13px;
+    color: #856A5D;
+}
+
+.paymentMethods {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.addBtn {
+    background: none;
+    border: 1.5px dashed #856A5D;
+    border-radius: 12px;
+    padding: 10px;
+    font-size: 14px;
+    font-family: 'Advent Pro';
+    text-transform: uppercase;
+    color: #856A5D;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.addBtn:hover {
+    background-color: #e8e0d5;
+    border-style: solid;
+}
+
+.formModal {
+    background-color: #F3EFE0;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 15px;
+    border: 1px solid rgba(60, 42, 33, 0.1);
+}
+
+.formModal h3 {
+    font-size: 16px;
+    font-family: 'Advent Pro';
+    font-weight: 600;
+    color: #3C2A21;
+    margin-bottom: 15px;
+}
+
+.formModal input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1.5px solid #3C2A21;
+    border-radius: 12px;
+    font-family: 'Advent Pro';
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.rowInputs {
+    display: flex;
+    gap: 10px;
+}
+
+.rowInputs input {
+    flex: 1;
+}
+
+.formActions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.formActions button {
+    padding: 8px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: 'Advent Pro';
+    font-size: 14px;
+}
+
+.formActions button:first-child {
+    background-color: #856A5D;
+    color: #F3EFE0;
+    border: none;
+}
+
+.formActions button:first-child:hover {
+    background-color: #6d554a;
+}
+
+.formActions button:last-child {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+}
+
+.formActions button:last-child:hover {
+    background-color: #bbb;
+}
+
+.emptyInfo {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-family: 'Advent Pro';
+}
+
+.orderSummary {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    position: sticky;
+    top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(60, 42, 33, 0.1);
+}
+
+.orderSummary h2 {
+    font-size: 22px;
+    font-family: 'Advent Pro';
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #856A5D;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #856A5D;
+}
+
+.orderItems {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.orderItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #e8e0d5;
+    font-family: 'Advent Pro';
+    font-size: 15px;
+    color: #3C2A21;
+}
+
+.orderItem span:last-child {
+    font-weight: 600;
+    color: #856A5D;
+}
+
+.totalRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-top: 2px solid #856A5D;
+    font-size: 20px;
+    font-family: 'Advent Pro';
+    font-weight: 600;
+    color: #3C2A21;
+}
+
+.totalPrice {
+    font-size: 26px;
+    color: #856A5D;
+}
+
+.payBtn {
+    width: 100%;
+    padding: 16px;
+    background-color: #856A5D;
+    color: #F3EFE0;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.payBtn:hover {
+    background-color: #6d554a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.loading {
+    text-align: center;
+    padding: 100px;
+    font-family: 'Advent Pro';
+    font-size: 20px;
+    color: #666;
+}

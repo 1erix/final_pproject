@@ -1,0 +1,61 @@
+.card {
+    border: 2px solid #3C2A21;
+    border-radius: 30px;
+    padding: 22px 30px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 400px;
+    align-items: center;
+    gap: 15px;
+}
+
+.image {
+    height: 200px;
+    align-items: center;
+}
+
+.image img {
+    border-radius: 20px;
+    border: 2px solid #3C2A21;
+    cursor: pointer;
+}
+
+.text_btn {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.text_btn h1 {
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #3C2A21;
+    height: 43px;
+    cursor: pointer;
+}
+
+.text_btn p {
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    font-weight: 500;
+    color: #3C2A21;
+}
+
+.text_btn button {
+    width: 130px;
+    height: 46px;
+    background-color: #9F897F;
+    border: 0;
+    border-radius: 15px;
+    font-family: 'Advent Pro';
+    font-size: 18px;
+    font-weight: 500;
+    color: #F3EFE0;
+    text-transform: uppercase;
+    cursor: pointer;
+}

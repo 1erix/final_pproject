@@ -1,0 +1,19 @@
+.our_advantages {
+    padding: 0px 125px 45px 125px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.our_advantages h1 {
+    font-size: 28px;
+    font-family: 'Advent Pro';
+    font-weight: 600;
+    color: #3C2A21;
+    text-transform: uppercase;
+}

@@ -1,0 +1,425 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #F3EFE0;
+    border-radius: 20px;
+    z-index: 1001;
+    width: 900px;
+    max-width: 90vw;
+    height: 85vh;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(60, 42, 33, 0.1);
+}
+
+.content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px 30px;
+}
+
+.content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: #e8e0d5;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: #856A5D;
+    border-radius: 10px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background: #6d554a;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1002;
+}
+
+.close {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close:hover {
+    transform: scale(1.1);
+    opacity: 0.7;
+}
+
+.favouriteHeader {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.favouriteHeader:hover {
+    transform: scale(1.1);
+}
+
+.favouriteBtnHeader {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.start_set {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.start_set h1 {
+    font-size: 24px;
+    font-family: 'Advent Pro';
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #3C2A21;
+    margin: 0;
+}
+
+.start_set p {
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    color: #3C2A21;
+    margin: 0;
+}
+
+.start_set span {
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.bases {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.bases h2 {
+    font-size: 20px;
+    font-family: 'Advent Pro';
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #3C2A21;
+    margin: 0;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.arrow {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.arrow:hover {
+    transform: scale(1.1);
+}
+
+.baseImageWrapper {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.baseImageWrapper:hover {
+    transform: scale(1.02);
+}
+
+.baseImage {
+    border-radius: 20px;
+    border: 2px solid #3C2A21;
+    transition: all 0.3s ease;
+}
+
+.selectedBaseImage {
+    border: 3px solid #856A5D;
+    box-shadow: 0 0 0 3px rgba(133, 106, 93, 0.2);
+}
+
+.name_price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+}
+
+.name_price h3 {
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    font-weight: 600;
+    color: #3C2A21;
+    margin: 0;
+}
+
+.name_price p {
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    font-weight: 600;
+    color: #856A5D;
+    margin: 0;
+}
+
+.h2 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.h2 h2 {
+    font-size: 20px;
+    font-family: 'Advent Pro';
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #3C2A21;
+    margin: 0;
+}
+
+.other_ingredients {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.category h3 {
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #856A5D;
+    margin: 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #856A5D;
+}
+
+.ingredientsGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ingredientOption {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background: #F3EFE0;
+}
+
+.ingredientOption:hover {
+    background: #e8e0d5;
+    transform: translateX(5px);
+}
+
+.ingredientOption input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: #856A5D;
+    transition: all 0.3s ease;
+}
+
+.ingredientOption input[type="checkbox"]:hover {
+    transform: scale(1.1);
+}
+
+.ingredientName {
+    flex: 1;
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    color: #3C2A21;
+}
+
+.ingredientPrice {
+    font-size: 17px;
+    font-family: 'Advent Pro';
+    font-weight: 600;
+    color: #856A5D;
+}
+
+.ingredientOption.selected {
+    background: #856A5D;
+}
+
+.ingredientOption.selected .ingredientName {
+    color: #F3EFE0;
+}
+
+.ingredientOption.selected .ingredientPrice {
+    color: #F3EFE0;
+}
+
+.result {
+    background: #e8e0d5;
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.result h2 {
+    font-size: 20px;
+    font-family: 'Advent Pro';
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #3C2A21;
+    margin: 0 0 15px 0;
+}
+
+.selectedItems {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+    max-height: 150px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.selectedItems::-webkit-scrollbar {
+    width: 5px;
+}
+
+.selectedItems::-webkit-scrollbar-track {
+    background: #d0c2b5;
+    border-radius: 10px;
+}
+
+.selectedItems::-webkit-scrollbar-thumb {
+    background: #856A5D;
+    border-radius: 10px;
+}
+
+.resultItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px dashed rgba(60, 42, 33, 0.2);
+}
+
+.itemName {
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    color: #3C2A21;
+}
+
+.itemPrice {
+    font-size: 17px;
+    font-family: 'Advent Pro';
+    font-weight: 600;
+    color: #856A5D;
+}
+
+.totalBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    border-top: 2px solid #856A5D;
+}
+
+.totalRow {
+    display: flex;
+    align-items: baseline;
+}
+
+.totalValue {
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    font-weight: 600;
+    color: #3C2A21;
+}
+
+.totalValue span {
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.addButton {
+    padding: 10px 25px;
+    background-color: #856A5D;
+    border-radius: 25px;
+    font-family: 'Advent Pro';
+    text-transform: uppercase;
+    color: #F3EFE0;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.addButton:hover {
+    background-color: #6d554a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hiddenInput {
+    display: none;
+}
+
+.actionButtons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}

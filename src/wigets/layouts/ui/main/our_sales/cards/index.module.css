@@ -1,0 +1,61 @@
+.our_sales {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+    margin: 0;
+    padding: 0;
+}
+
+.our_sales_card {
+    width: 310px;
+    height: 135px;
+    padding: 20px 40px;
+    background-color: #D0C2B5;
+    border: 2px solid #856A5D;
+    border-radius: 15px;
+    text-align: center;
+    align-items: center;
+    flex-shrink: 0;
+    transition: none;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.our_sales_card h1 {
+    font-family: 'Advent Pro';
+    font-size: 18px;
+    font-weight: 500;
+    color: #3C2A21;
+    margin: 0 0 10px 0;
+}
+
+.our_sales_card p {
+    font-family: 'Advent Pro';
+    font-size: 16px;
+    font-weight: 300;
+    color: #3C2A21;
+    margin: 0;
+}
+
+.cards_arrows {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow: visible;
+    max-width: 100%;
+    justify-content: center;
+}
+
+.carousel_container {
+    overflow: hidden;
+    width: 1410px;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.arrow_button {
+    cursor: pointer;
+}

@@ -1,0 +1,19 @@
+.how_it_works {
+    padding: 15px 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.h1 h1 {
+    font-size: 28px;
+    font-family: 'Advent Pro';
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #3C2A21;
+}

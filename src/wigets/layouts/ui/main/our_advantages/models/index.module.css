@@ -1,0 +1,23 @@
+.all_advantages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+.advantage {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.advantage div {
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    font-weight: 500;
+}
+
+.advantage span {
+    font-weight: 600;
+}

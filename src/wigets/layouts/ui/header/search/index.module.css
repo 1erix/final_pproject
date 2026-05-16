@@ -1,0 +1,129 @@
+.searchContainer {
+    position: relative;
+    width: 300px;
+}
+
+.searchBox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1.5px solid #3C2A21;
+    border-radius: 15px;
+    padding: 8px 15px;
+    background-color: #F3EFE0;
+    cursor: pointer;
+}
+
+.searchBox:hover {
+    background-color: #e8e0d5;
+}
+
+.searchInput {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 20px;
+    font-family: 'Advent Pro';
+}
+
+.searchInput::placeholder {
+    color: #999;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 8px;
+    background: #F3EFE0;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(60, 42, 33, 0.1);
+    max-height: 400px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.dropdown::-webkit-scrollbar {
+    width: 8px;
+}
+
+.dropdown::-webkit-scrollbar-track {
+    background: #e8e0d5;
+    border-radius: 10px;
+}
+
+.dropdown::-webkit-scrollbar-thumb {
+    background: #856A5D;
+    border-radius: 10px;
+}
+
+.resultsCount {
+    padding: 10px 15px;
+    font-size: 18px;
+    color: #856A5D;
+    font-family: 'Advent Pro';
+    border-bottom: 1px solid rgba(60, 42, 33, 0.1);
+}
+
+.resultsList {
+    display: flex;
+    flex-direction: column;
+}
+
+.resultItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(60, 42, 33, 0.05);
+}
+
+.resultItem:hover {
+    background-color: #e8e0d5;
+}
+
+.resultImage {
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.resultInfo {
+    flex: 1;
+}
+
+.resultName {
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    font-weight: 500;
+    color: #3C2A21;
+    margin-bottom: 4px;
+}
+
+.resultPrice {
+    font-size: 16px;
+    font-family: 'Advent Pro';
+    font-weight: 600;
+    color: #856A5D;
+}
+
+.category {
+    font-size: 18px;
+    color: #999;
+    margin-top: 2px;
+    display: inline-block;
+}
+
+.loading,
+.noResults {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Advent Pro';
+    font-size: 18px;
+    color: #666;
+}

@@ -1,0 +1,15 @@
+.our_sales {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 20px;
+}
+
+.h1 {
+    font-size: 28px;
+    font-family: 'Advent Pro';
+    font-weight: 600;
+    color: #3C2A21;
+    text-transform: uppercase;
+    padding-left: 60px;
+}

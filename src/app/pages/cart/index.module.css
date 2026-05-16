@@ -1,0 +1,155 @@
+.cart {
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.cards {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.results {
+    width: 480px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
+    height: fit-content;
+    background-color: rgba(243, 239, 224, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(60, 42, 33, 0.1);
+    transition: all 0.3s ease;
+}
+
+.results:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.promocode {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+}
+
+.promocode input {
+    text-align: center;
+    padding: 10px 15px;
+    border: 1.5px solid #3C2A21;
+    border-radius: 15px;
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    background-color: #F3EFE0;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.promocode input:focus {
+    outline: none;
+    border-color: #856A5D;
+    box-shadow: 0 0 0 3px rgba(133, 106, 93, 0.2);
+}
+
+.promocode button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3C2A21;
+    border-radius: 15px;
+    color: #F3EFE0;
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.promocode button:hover {
+    background-color: #856A5D;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-top: 1px solid rgba(60, 42, 33, 0.1);
+    border-bottom: 1px solid rgba(60, 42, 33, 0.1);
+}
+
+.result h1 {
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    text-transform: uppercase;
+    color: #3C2A21;
+    margin: 0;
+}
+
+.result p {
+    font-size: 22px;
+    font-family: 'Advent Pro';
+    font-weight: 600;
+    color: #856A5D;
+    margin: 0;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.to_pay a {
+    width: 100%;
+    padding: 12px;
+    background-color: #856A5D;
+    border-radius: 15px;
+    color: #F3EFE0;
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.to_pay a:hover {
+    background-color: #6d554a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.clear_cart button {
+    width: 100%;
+    padding: 12px;
+    background-color: #F3EFE0;
+    border: 1.5px solid #3C2A21;
+    border-radius: 15px;
+    color: #3C2A21;
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.clear_cart button:hover {
+    background-color: #e8e0d5;
+    transform: translateY(-2px);
+    border-color: #856A5D;
+}

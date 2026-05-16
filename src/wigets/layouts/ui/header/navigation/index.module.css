@@ -1,0 +1,12 @@
+.nav {
+    display: flex;
+    gap: 60px;
+}
+
+.link {
+    font-size: 25px;
+    font-family: 'Advent Pro';
+    font-weight: 400;
+    color: #3C2A21;
+    text-transform: uppercase;
+}

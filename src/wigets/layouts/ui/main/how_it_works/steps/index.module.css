@@ -1,0 +1,42 @@
+.step {
+    display: flex;
+    flex-direction: column;
+}
+
+.without_img {
+    display: flex;
+    flex-direction: column;
+}
+
+.text_img {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+.text_img h1 {
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.without_img p {
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    font-weight: 500;
+    width: 300px;
+}
+
+.second_step {
+    padding-left: 700px;
+}
+
+.second_step h1 {
+    width: 300px;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+}

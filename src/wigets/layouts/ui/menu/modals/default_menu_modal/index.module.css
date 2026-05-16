@@ -1,0 +1,243 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #F3EFE0;
+    border-radius: 20px;
+    z-index: 1001;
+    width: 800px;
+    max-width: 90vw;
+    height: 80vh;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(60, 42, 33, 0.1);
+}
+
+.info {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 10px;
+    margin-top: 40px;
+}
+
+.info::-webkit-scrollbar {
+    width: 8px;
+}
+
+.info::-webkit-scrollbar-track {
+    background: #e8e0d5;
+    border-radius: 10px;
+}
+
+.info::-webkit-scrollbar-thumb {
+    background: #856A5D;
+    border-radius: 10px;
+}
+
+.info::-webkit-scrollbar-thumb:hover {
+    background: #6d554a;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1002;
+}
+
+.close {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close:hover {
+    transform: scale(1.1);
+    opacity: 0.7;
+}
+
+.favouriteHeader {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.favouriteHeader:hover {
+    transform: scale(1.1);
+}
+
+.favouriteBtnHeader {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img_count {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.img_count img {
+    border-radius: 20px;
+    border: 2px solid #3C2A21;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+    flex: 1;
+}
+
+.content h1 {
+    font-size: 24px;
+    font-family: 'Advent Pro';
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #3C2A21;
+}
+
+.content p {
+    font-size: 20px;
+    font-family: 'Advent Pro';
+    font-weight: 600;
+    color: #856A5D;
+}
+
+.count_btn {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.count {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid #3C2A21;
+    padding: 8px 30px;
+    gap: 30px;
+    border-radius: 30px;
+    background: #F3EFE0;
+}
+
+.count button {
+    font-size: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #3C2A21;
+}
+
+.count button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.count p {
+    font-size: 20px;
+    margin: 0;
+    color: #3C2A21;
+}
+
+.add_to_cart button {
+    padding: 10px 30px;
+    background-color: #856A5D;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #F3EFE0;
+    font-family: 'Advent Pro';
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.add_to_cart button:hover {
+    background-color: #6d554a;
+    transform: translateY(-2px);
+}
+
+.ingredients_bzhu {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.ingredients {
+    flex: 1;
+    background: #e8e0d5;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.ingredients p {
+    font-size: 16px;
+    font-family: 'Advent Pro';
+    color: #3C2A21;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.ingredients span {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.bzhu {
+    display: flex;
+    text-align: center;
+    gap: 20px;
+    border: 1.5px solid #3C2A21;
+    padding: 15px 20px;
+    border-radius: 15px;
+    background: #F3EFE0;
+}
+
+.bzhu div {
+    min-width: 50px;
+}
+
+.bzhu p {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    color: #856A5D;
+}
+
+.bzhu h2 {
+    font-family: 'Advent Pro';
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #3C2A21;
+    margin: 5px 0 0 0;
+}

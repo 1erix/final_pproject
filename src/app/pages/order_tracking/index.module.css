@@ -1,0 +1,358 @@
+.order_tracking {
+    min-height: 100vh;
+    background: #F3EFE0;
+    padding: 50px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 32px;
+    font-family: 'Advent Pro';
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #3C2A21;
+    margin-bottom: 15px;
+}
+
+.orderNumber {
+    font-size: 18px;
+    font-family: 'Advent Pro';
+}
+
+.orderNumber span {
+    color: #666;
+}
+
+.orderNumber strong {
+    color: #856A5D;
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+.statusSection {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.statusCard {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.statusCard h3 {
+    font-size: 20px;
+    font-family: 'Advent Pro';
+    color: #3C2A21;
+    margin-bottom: 15px;
+}
+
+.statusBadge {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.statusConfirmed {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.statusPreparing {
+    background: #fff3e0;
+    color: #ff9800;
+}
+
+.statusDelivering {
+    background: #e8f5e9;
+    color: #4caf50;
+}
+
+.statusDelivered {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.statusDefault {
+    background: #f5f5f5;
+    color: #666;
+}
+
+.estimatedTime {
+    font-size: 16px;
+    font-family: 'Advent Pro';
+}
+
+.estimatedTime span {
+    color: #666;
+    margin-right: 10px;
+}
+
+.estimatedTime strong {
+    color: #856A5D;
+    font-size: 18px;
+}
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #e0e0e0;
+    z-index: 0;
+}
+
+.timelineStep {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.stepDot {
+    width: 30px;
+    height: 30px;
+    background: #e0e0e0;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    transition: all 0.3s;
+}
+
+.timelineStep.active .stepDot {
+    background: #856A5D;
+    box-shadow: 0 0 0 5px rgba(133, 106, 93, 0.2);
+}
+
+.stepText {
+    font-size: 14px;
+    font-family: 'Advent Pro';
+    color: #666;
+}
+
+.timelineStep.active .stepText {
+    color: #856A5D;
+    font-weight: 600;
+}
+
+.orderInfo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.orderDetails,
+.deliveryInfo,
+.paymentInfo,
+.customerInfo {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.orderDetails h3,
+.deliveryInfo h3,
+.paymentInfo h3,
+.customerInfo h3 {
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #3C2A21;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #856A5D;
+}
+
+.itemsList {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+}
+
+.orderItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.itemInfo {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+}
+
+.itemName {
+    font-size: 15px;
+    font-family: 'Advent Pro';
+    color: #333;
+}
+
+.itemQuantity {
+    font-size: 13px;
+    color: #856A5D;
+}
+
+.itemPrice {
+    font-size: 15px;
+    font-weight: 600;
+    color: #856A5D;
+}
+
+.totalRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    margin-top: 10px;
+    border-top: 2px solid #856A5D;
+    font-size: 18px;
+}
+
+.totalRow strong {
+    color: #856A5D;
+    font-size: 22px;
+}
+
+.infoRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.infoRow span {
+    color: #666;
+    font-family: 'Advent Pro';
+}
+
+.infoRow strong {
+    color: #3C2A21;
+    font-family: 'Advent Pro';
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.homeBtn,
+.menuBtn {
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-family: 'Advent Pro';
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.homeBtn {
+    background: #856A5D;
+    color: #F3EFE0;
+}
+
+.homeBtn:hover {
+    background: #6d554a;
+    transform: translateY(-2px);
+}
+
+.menuBtn {
+    background: #F3EFE0;
+    color: #856A5D;
+    border: 2px solid #856A5D;
+}
+
+.menuBtn:hover {
+    background: #856A5D;
+    color: #F3EFE0;
+    transform: translateY(-2px);
+}
+
+.loading {
+    text-align: center;
+    padding: 100px;
+    font-size: 20px;
+    font-family: 'Advent Pro';
+    color: #666;
+}
+
+.notFound {
+    text-align: center;
+    padding: 100px;
+}
+
+.notFound h2 {
+    font-size: 28px;
+    color: #3C2A21;
+    margin-bottom: 20px;
+}
+
+.homeLink {
+    color: #856A5D;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .order_tracking {
+        padding: 20px;
+    }
+
+    .timeline {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .timelineStep {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .stepDot {
+        margin: 0;
+    }
+
+    .orderInfo {
+        grid-template-columns: 1fr;
+    }
+
+    .actions {
+        flex-direction: column;
+        align-items: center;
+    }
+}

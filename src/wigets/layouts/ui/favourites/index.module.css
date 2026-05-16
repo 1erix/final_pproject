@@ -1,0 +1,128 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 50%;
+    padding-top: 50px;
+}
+
+.without_line {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    text-align: center;
+}
+
+.image {
+    width: 250px;
+    height: 250px;
+    border: 1.5px solid #3C2A21;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.image img {
+    width: 250px;
+    height: 250px;
+    border: 1.5px solid #3C2A21;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.right_part {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.right_part h1 {
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    text-transform: uppercase;
+    color: #3C2A21;
+    cursor: pointer;
+}
+
+.right_part p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #3C2A21;
+}
+
+.add_to_cart button {
+    width: 200px;
+    height: 35px;
+    background-color: #F3EFE0;
+    border: 1.5px solid #3C2A21;
+    border-radius: 15px;
+    color: #3C2A21;
+    font-size: 16px;
+    font-family: 'Advent Pro';
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.line {
+    height: 1.5px;
+    background-color: #3C2A21;
+    /* width: 50%; */
+}
+
+.removeFavourite {
+    background: none;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Advent Pro';
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.removeFavourite:hover {
+    text-decoration: underline;
+}
+
+.loading {
+    text-align: center;
+    padding: 50px;
+    font-family: 'Advent Pro';
+    font-size: 18px;
+    color: #666;
+}
+
+.empty {
+    text-align: center;
+    padding: 50px;
+    font-family: 'Advent Pro';
+    font-size: 18px;
+    color: #666;
+}
+
+.removeFavourite {
+    background: none;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Advent Pro';
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.removeFavourite:hover {
+    text-decoration: underline;
+}
+
+.empty {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.empty p {
+    font-family: 'Advent Pro';
+    font-size: 23px;
+    text-transform: uppercase;
+}

@@ -1,0 +1,81 @@
+.footer {
+    background-color: #504746;
+    display: flex;
+    justify-content: space-between;
+    height: 250px;
+    width: 100%;
+}
+
+.left_part {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 62px 0px 42px 48px;
+}
+
+.phone {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.phone p {
+    font-size: 16px;
+    font-family: 'Advent Pro';
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.email p {
+    font-size: 18px;
+    font-family: 'Advent Pro';
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.right_part {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 62px 48px 42px 0px;
+    text-align: center;
+}
+
+.sales_ingredients {
+    font-family: 'Advent Pro';
+    font-size: 17px;
+    font-weight: 500;
+    color: #F3EFE0;
+    text-transform: uppercase;
+}
+
+.right_part form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+    text-align: center;
+}
+
+.right_part input {
+    padding: 12px 93px 12px 19px;
+    border-radius: 15px;
+    background-color: #F3EFE0;
+    font-family: 'Advent Pro';
+    font-size: 17px;
+    font-weight: 500;
+    color: #000;
+}
+
+.right_part button {
+    width: 139px;
+    height: 30px;
+    background-color: #F3EFE0;
+    border: 2px solid #3C2A21;
+    border-radius: 8px;
+    font-family: 'Advent Pro';
+    font-size: 14px;
+    font-weight: 500;
+    color: #3C2A21;
+    text-transform: uppercase;
+}
